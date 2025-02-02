@@ -636,11 +636,11 @@ h3 {
 
     .portfolio img {
         height: 150px;
-        width: 110px;
+        width: 100px;
     }
     /* Карточка услуги */
     .service {
-        width: 106px;
+        width: 96px;
         height: 200px;
     }
 
@@ -669,7 +669,7 @@ h3 {
         font-size: 6px;
     }
 }
-@media (max-width: 460px) {
+@media (max-width: 440px) {
     .portfolio-container.active {
         grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряду для экранов меньше 1200px */
     }
