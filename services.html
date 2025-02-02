@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключение стилей -->
+</head>
+<body>
+
+<!-- Верхний заголовок с контактами -->
+    <header class="header">
+        <div class="header-left">
+            <p>Улица Красной Армии, 10</p>
+
+            <section id="socials">
+                <div class="social-icons-up">
+                    <a href="https://vk.com/anturazhstyle" target="_blank">
+                        <img src="images/index/indexS2.svg" alt="ВКонтакте">
+                    </a>
+                    <a href="https://t.me/Alekca_Kruglova" target="_blank">
+                        <img src="images/index/indexS1.svg" alt="Telegram">
+                    </a>
+                    <a href="https://wa.me/89029618490" target="_blank">
+                        <img src="images/index/indexS3.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="header-center">
+            <img src="images/index/logo.jpg" alt="Логотип" class="logo">
+        </div>
+
+        <div class="header-right">
+            <p><strong>+7 (902) 961-84-90</strong></p>
+            <p>C 10:00 до 20:00, вc выходной</p>
+        </div>
+    </header>
+
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="portfolio.html">Портфолио</a>
+</nav>
+
+<div class="container-services">
+    <!-- Подменю -->
+    <div class="menu">
+        <button class="menu-btn active" data-category="hair-services">Парикмахерские услуги</button>
+        <button class="menu-btn" data-category="nail-services">Маникюр и педикюр</button>
+        <button class="menu-btn" data-category="eyes-services">Брови и ресницы</button>
+        <button class="menu-btn" data-category="depilation-services">Депиляция</button>
+    </div>
+
+    <!-- Блоки с услугами -->
+    <div id="hair-services" class="services-container active"></div>
+    <div id="nail-services" class="services-container"></div>
+    <div id="eyes-services" class="services-container"></div>
+    <div id="depilation-services" class="services-container"></div>
+</div>
+
+<!-- Модальное окно для увеличенного изображения -->
+<div id="modal" class="modal">
+    <span class="close" id="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img" src="">
+</div>
+
+<script>
+    // Функция для генерации карточек услуг
+    function renderServices(services, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ""; // Очищаем контейнер перед вставкой данных
+        services.forEach(service => {
+            container.innerHTML += `
+                <div class="service">
+                    ${service.image ? `<img src="${service.image}" alt="${service.title}" class="service-img">` : ''}
+                    <h3>${service.title}</h3>
+                    <p>${service.description || 'Описание отсутствует'}</p>
+                    <p class="price">${service.price}</p>
+                </div>
+            `;
+        });
+    }
+
+    // Данные об услугах
+    const hairServices = [
+            {
+                image: "images/services/hairServices/hairServices1.jpg" ,
+                title: "Стрижка средняя длина",
+                description: "Стрижка женская подбирается по типу лица, запросов клиента, как он носит проводится подробная консультация, спа-процедура и сама стиржка укладка.",
+                price: "1400-2000 ₽"
+                            },
+	        {
+                image: "images/services/hairServices/hairServices2.jpg" ,
+                title: "Химическая завивка",
+                description: "Производится подробнейшая консультация перед процедурой.",
+                price: "5000 ₽"
+                            },
+            {
+                image: "images/services/hairServices/hairServices3.jpg" ,
+                title: "Мелирование и тонирование",
+                description: "Осветление волос в технике мелирование по всей голове и тонирование в особой технике. За счет такой техники окрашивание носится очень долго.",
+                price: "5500 ₽"
+                            },
+	        {
+                image: "images/services/hairServices/hairServices4.jpg" ,
+                title: "Стрижка короткая",
+                description: "Правильная стрижка.",
+                price: "1400-2000 ₽"
+                            },
+            {
+                image: "images/services/hairServices/hairServices5.jpg" ,
+                title: "Выход из черного",
+                description: "Выход из черного непростое дело. Поэтому всегда перед процедурой проводится консультация и тест прядей.",
+                price: "12000 ₽"
+                            },
+            {
+                image: "images/services/hairServices/hairServices6.jpg" ,
+                title: "Airtouch",
+                description: "Airtouch выдувание волос феном, прикосновение воздуха! Особая техника мелирования при которой все очень плавно отрастает и такое окрашивание можно носить около года, может и больше!",
+                price: "От 8400 ₽"
+                            },
+             {
+                image: "images/services/hairServices/hairServices7.jpg" ,
+                title: "Тонирование",
+                description: "В данном случае тонирование и коррекция цвета.",
+                price: "3400 ₽"
+                            },
+             {
+                image: "images/services/hairServices/hairServices8.jpg" ,
+                title: "Мужские стрижки",
+                description: "",
+                price: "600-1200 ₽"
+                            },
+             {
+                image: "images/services/hairServices/hairServices9.jpg" ,
+                title: "Окрашивание",
+                description: "Осветление корней премиальным брендом Framesi осветляющим продуктом и тонирование.",
+                price: "5000 ₽"
+                            },
+	     {
+                image: "images/services/hairServices/hairServices11.jpg" ,
+                title: "Контуринг",
+                description: "Контуринг - особый вид техники милирования, обрамляет зону у лица особыми прядями. Осветление порошком плюс тонирование.",
+                price: "5000 ₽"
+                            },
+	     {
+                image: "images/services/hairServices/hairServices12.jpg" ,
+                title: "Тотол блонд",
+                description: "Обесцвечивание корней и тонирование премиальным брендом Fremasi",
+                price: "5000 ₽"
+                            },
+	     {
+                image: "images/services/hairServices/hairServices13.jpg" ,
+                title: "Контуринг: осветление прядей у лица и стрижка",
+                description: "Осветление прядей у лица коммереческой зоны, тонирование.",
+                price: "3500 ₽"
+                            },
+	     {
+                image: "images/services/hairServices/hairServices14.jpg" ,
+                title: "Окрашивание",
+                description: "Коррекция цвета с помощью тонирования безаммиачными красителями премиального бренда, возвращает волосам блеск, шелковистость, здоровый вид.",
+                price: "2700-6000 ₽"
+                            },
+	    {
+                image: "images/services/hairServices/hairServices15.jpg" ,
+                title: "Уход для волос",
+                description: "Уход Restructure от премиального бренда Framesi, предназначен для волос со структурными изменениями, то есть хрупких, сухих волос, которым нужно увлажнение, очень хорошо подходит для окрашенных волос любого вида.",
+                price: "2500 ₽"
+                            },
+            {
+                image: "images/services/hairServices/hairServices16.jpg" ,
+                title: "Укладка",
+                description: "Создание красивой укладки, в зависимотсти от желаний клиента",
+                price: "2500 ₽"
+            },
+            {
+                image: "images/services/hairServices/hairServices17.jpg" ,
+                title: "Мелирование",
+                description: "Осветление волос в технике мелирование по всей голове.",
+                price: "4500-10000"
+            },
+
+    ];
+
+    const nailServices = [
+                    {
+                image: "images/services/nailServices/nailServices1.jpg",
+                title: "Маникюр",
+                description: "Самое волшебное время на пороге, ваш маникюр мечты можно сделать в студии Антураж-Style.",
+                price: "1800 руб."
+            },
+            {
+                image: "images/services/nailServices/nailServices2.jpg",
+                title: "Педикюр",
+                description: "Самое волшебное время на пороге, ваш педикюр мечты можно сделать в студии Антураж-Style.",
+                price: "1700 руб."
+            },
+
+
+    ];
+
+    const eyesServices = [
+       {
+                image: "images/services/eyesServices/eyesServices1.jpg",
+                title: "Коррекция бровей",
+                description: "В процедуру входит очищение кожи, построение формы. При процедуре используется воск и пинцет.",
+                price: "600 руб."
+            },
+ 	    {
+                image: "images/services/eyesServices/eyesServices2.jpg",
+                title: "Коррекция и окрашивание бровей",
+                description: "Построение формы бровей, коррекция от лишних волосков, подбор цвета брови и окрашивание.",
+                price: "1000 руб."
+            },
+ {
+                image: "images/services/eyesServices/eyesServices3.jpg",
+                title: "Ламинирование ресниц",
+                description: "",
+                price: "1300 руб."
+            },
+ {
+                image: "images/services/eyesServices/eyesServices4.jpg",
+                title: "Окрашивание бровей",
+                description: "Процедура происходит с помощью натурального красителя - хны.",
+                price: "600 руб."
+            },
+
+    ];
+
+    const depilationServices = [
+        {
+                image: "images/services/depilationServices/depilationServices1.jpg",
+                title: "Депиляция женская: ноги + подмышки",
+                description: "Безболезненая депеляция воском.",
+                price: "1600 руб."
+            },
+	    {
+                image: "images/services/depilationServices/depilationServices2.jpg",
+                title: "Мужская депиляция: торс",
+                description: "Безболезненая депиляция воском.",
+                price: "1000 руб."
+            },
+        {
+            title: "Женское бикини глубокое + подмышки",
+            description: "Глубокое бикини + подмышки воском.",
+            price: "1600 руб."
+        },
+	    {
+                title: "Мужское бикини глубокое + подышки",
+                description: "Глубокое бикини + подмышки воском.",
+                price: "2500 руб."
+            },
+
+
+    ];
+
+    // Рендеринг услуг
+    renderServices(hairServices, "hair-services");
+    renderServices(nailServices, "nail-services");
+    renderServices(eyesServices, "eyes-services");
+    renderServices(depilationServices, "depilation-services");
+
+// Логика переключения категорий
+    document.querySelectorAll('.menu-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            document.querySelectorAll('.services-container').forEach(container => {
+                container.classList.remove('active');
+            });
+
+            document.getElementById(this.dataset.category).classList.add('active');
+        });
+    });
+
+    // Открытие модального окна при клике на изображение
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeModal = document.getElementById("close-modal");
+
+    document.querySelectorAll('.service-img').forEach(img => {
+        img.addEventListener('click', function () {
+            modal.style.display = "flex";
+            modalImg.src = this.src; // Устанавливаем источник изображения в модальное окно
+        });
+    });
+
+    // Закрытие модального окна
+    closeModal.addEventListener('click', function () {
+        modal.style.display = "none";
+    });
+
+    // Закрытие модального окна, если кликнуть вне области изображения
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+
+<footer>
+    <p>&copy; Anturazh Style. Салон красоты.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

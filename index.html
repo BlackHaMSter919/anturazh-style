@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключение стилей -->
+</head>
+<body>
+
+    <!-- Верхний заголовок с контактами -->
+    <header class="header">
+        <div class="header-left">
+            <p>Улица Красной Армии, 10</p>
+
+            <section id="socials">
+                <div class="social-icons-up">
+                    <a href="https://vk.com/anturazhstyle" target="_blank">
+                        <img src="images/index/indexS2.svg" alt="ВКонтакте">
+                    </a>
+                    <a href="https://t.me/Alekca_Kruglova" target="_blank">
+                        <img src="images/index/indexS1.svg" alt="Telegram">
+                    </a>
+                    <a href="https://wa.me/89029618490" target="_blank">
+                        <img src="images/index/indexS3.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="header-center">
+            <img src="images/index/logo.jpg" alt="Логотип" class="logo">
+        </div>
+
+        <div class="header-right">
+            <p><strong>+7 (902) 961-84-90</strong></p>
+            <p>C 10:00 до 20:00, вc выходной</p>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="portfolio.html">Портфолио</a>
+    </nav>
+
+<div class="open-image">
+    <img src="images/index/index4.jpg" alt="Салон красоты" style="width: 100%; height: auto;">
+</div>
+
+   <div class="action-banner">
+
+    <div class="action-display">
+        <!-- Акция будет загружена сюда -->
+    </div>
+   </div>
+ <script>
+ window.addEventListener('DOMContentLoaded', (event) => {
+    fetch('actions/action4.html')  // Замените на путь к вашему HTML файлу с акцией
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('.action-display').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке акции:', error);
+        });
+});
+</script>
+
+    <!-- Карта с местоположением -->
+    <section id="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28d8feb2cb5d6f49680a911223480adebb7a9ca3f47fffbbc4111fb5fcf339b0&amp;source=constructor" width="607" height="430" frameborder="0"></iframe>
+<div class="map-text">
+        <p><strong>Адрес:</strong> г. Красноярск, улица Красной Армии, 10,</p>
+<h>этаж 1.5, после эскалатора направо и до конца</h>
+<p></p>
+        <p><strong>Ежедневно:</strong> 10:00-20:00, воскресенье выходной</p>
+        <strong>+7 (902) 961-84-90</strong>
+</div>
+    </section>
+
+    <section id="socials">
+        <h2>Мы в соцсетях</h2>
+        <div class="social-icons-down">
+            <a href="https://vk.com/anturazhstyle" target="_blank">
+                <img src="images/index/indexS2.svg" alt="ВКонтакте">
+            </a>
+            <a href="https://t.me/Alekca_Kruglova" target="_blank">
+                <img src="images/index/indexS1.svg" alt="Telegram">
+            </a>
+            <a href="https://wa.me/89029618490" target="_blank">
+                <img src="images/index/indexS3.svg" alt="WhatsApp">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Anturazh Style. Салон красоты.</p>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

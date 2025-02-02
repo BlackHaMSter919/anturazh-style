@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключение стилей -->
+</head>
+<body>
+
+<!-- Верхний заголовок с контактами -->
+<header class="header">
+    <div class="header-left">
+        <p>Улица Красной Армии, 10</p>
+
+        <section id="socials">
+            <div class="social-icons-up">
+                <a href="https://vk.com/anturazhstyle" target="_blank">
+                    <img src="images/index/indexS2.svg" alt="ВКонтакте">
+                </a>
+                <a href="https://t.me/Alekca_Kruglova" target="_blank">
+                    <img src="images/index/indexS1.svg" alt="Telegram">
+                </a>
+                <a href="https://wa.me/89029618490" target="_blank">
+                    <img src="images/index/indexS3.svg" alt="WhatsApp">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div class="header-center">
+        <img src="images/index/logo.jpg" alt="Логотип" class="logo">
+    </div>
+
+    <div class="header-right">
+        <p><strong>+7 (902) 961-84-90</strong></p>
+        <p>C 10:00 до 20:00, вc выходной</p>
+    </div>
+</header>
+
+<!-- Навигация -->
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="portfolio.html">Портфолио</a>
+</nav>
+
+<!-- Контейнер с услугами -->
+<div class="container-portfolio">
+
+    <!-- Подменю -->
+    <div class="menu">
+        <button class="menu-btn active" data-category="hair-portfolio">Парикмахерские услуги</button>
+        <button class="menu-btn" data-category="nail-portfolio">Маникюр и педикюр</button>
+        <button class="menu-btn" data-category="eyes-portfolio">Брови и ресницы</button>
+    </div>
+
+    <div id="hair-portfolio" class="portfolio-container active"></div>
+    <div id="nail-portfolio" class="portfolio-container"></div>
+    <div id="eyes-portfolio" class="portfolio-container"></div>
+</div>
+
+<!-- Модальное окно для увеличенного изображения -->
+<div id="modal" class="modal">
+    <span class="close" id="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img" src="">
+</div>
+
+<script>
+// Функция для генерации карточек услуг (только изображения)
+function renderPortfolio(portfolio, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ""; // Очищаем контейнер перед вставкой данных
+
+    portfolio.forEach(portfolio => {
+        container.innerHTML += `
+            <div class="portfolio">
+                <img src="${portfolio.image}"
+ alt="portfolio.image" class="portfolio-img">
+            </div>
+        `;
+    });
+}
+
+// Данные для портфолио (только изображения)
+const portfolio = {
+    hair: [
+        { image: "images/portfolio/hair/hair1.jpg" },
+        { image: "images/portfolio/hair/hair2.jpg" },
+        { image: "images/portfolio/hair/hair3.jpg" },
+        { image: "images/portfolio/hair/hair4.jpg" },
+        { image: "images/portfolio/hair/hair5.jpg" },
+        { image: "images/portfolio/hair/hair6.jpg" },
+        { image: "images/portfolio/hair/hair7.jpg" },
+        { image: "images/portfolio/hair/hair8.jpg" },
+        { image: "images/portfolio/hair/hair9.jpg" },
+        { image: "images/portfolio/hair/hair10.jpg" },
+        { image: "images/portfolio/hair/hair11.jpg" },
+        { image: "images/portfolio/hair/hair12.jpg" },
+        { image: "images/portfolio/hair/hair13.jpg" },
+        { image: "images/portfolio/hair/hair14.jpg" },
+        { image: "images/portfolio/hair/hair15.jpg" },
+        { image: "images/portfolio/hair/hair16.jpg" },
+        { image: "images/portfolio/hair/hair17.jpg" },
+        { image: "images/portfolio/hair/hair18.jpg" },
+        { image: "images/portfolio/hair/hair19.jpg" },
+        { image: "images/portfolio/hair/hair20.jpg" },
+        { image: "images/portfolio/hair/hair21.jpg" },
+        { image: "images/portfolio/hair/hair22.jpg" },
+        { image: "images/portfolio/hair/hair23.jpg" },
+        { image: "images/portfolio/hair/hair24.jpg" },
+        { image: "images/portfolio/hair/hair25.jpg" },
+        { image: "images/portfolio/hair/hair26.jpg" },
+        { image: "images/portfolio/hair/hair27.jpg" },
+        { image: "images/portfolio/hair/hair28.jpg" },
+        { image: "images/portfolio/hair/hair29.jpg" },
+        { image: "images/portfolio/hair/hair30.jpg" },
+        { image: "images/portfolio/hair/hair31.jpg" },
+        { image: "images/portfolio/hair/hair32.jpg" },
+        { image: "images/portfolio/hair/hair33.jpg" },
+        { image: "images/portfolio/hair/hair34.jpg" },
+        { image: "images/portfolio/hair/hair35.jpg" },
+        { image: "images/portfolio/hair/hair36.jpg" },
+        { image: "images/portfolio/hair/hair37.jpg" },
+        { image: "images/portfolio/hair/hair38.jpg" },
+        { image: "images/portfolio/hair/hair39.jpg" },
+        { image: "images/portfolio/hair/hair40.jpg" },
+        { image: "images/portfolio/hair/hair41.jpg" },
+        { image: "images/portfolio/hair/hair42.jpg" },
+        { image: "images/portfolio/hair/hair43.jpg" },
+        { image: "images/portfolio/hair/hair44.jpg" },
+        { image: "images/portfolio/hair/hair45.jpg" },
+        { image: "images/portfolio/hair/hair46.jpg" },
+        { image: "images/portfolio/hair/hair47.jpg" },
+        { image: "images/portfolio/hair/hair48.jpg" },
+        { image: "images/portfolio/hair/hair49.jpg" },
+        { image: "images/portfolio/hair/hair50.jpg" },
+        { image: "images/portfolio/hair/hair51.jpg" },
+        { image: "images/portfolio/hair/hair52.jpg" },
+        { image: "images/portfolio/hair/hair53.jpg" },
+        { image: "images/portfolio/hair/hair54.jpg" },
+        { image: "images/portfolio/hair/hair55.jpg" },
+        { image: "images/portfolio/hair/hair56.jpg" },
+        { image: "images/portfolio/hair/hair57.jpg" },
+        { image: "images/portfolio/hair/hair58.jpg" },
+        { image: "images/portfolio/hair/hair59.webp" },
+        { image: "images/portfolio/hair/hair60.jpg" },
+        { image: "images/portfolio/hair/hair61.jpg" },
+        { image: "images/portfolio/hair/hair62.jpg" },
+        { image: "images/portfolio/hair/hair63.jpg" },
+        { image: "images/portfolio/hair/hair64.jpg" },
+        { image: "images/portfolio/hair/hair65.jpg" },
+        { image: "images/portfolio/hair/hair66.jpg" }
+    ],
+    nails: [
+        { image: "images/portfolio/nails/nails1.jpg" },
+        { image: "images/portfolio/nails/nails2.jpg" },
+        { image: "images/portfolio/nails/nails3.jpg" },
+        { image: "images/portfolio/nails/nails4.jpg" },
+        { image: "images/portfolio/nails/nails5.jpg" },
+        { image: "images/portfolio/nails/nails6.jpg" },
+        { image: "images/portfolio/nails/nails7.jpg" },
+        { image: "images/portfolio/nails/nails8.jpg" },
+        { image: "images/portfolio/nails/nails9.jpg" },
+        { image: "images/portfolio/nails/nails10.jpg" },
+        { image: "images/portfolio/nails/nails11.jpg" },
+        { image: "images/portfolio/nails/nails12.jpg" },
+        { image: "images/portfolio/nails/nails13.jpg" },
+        { image: "images/portfolio/nails/nails14.jpg" },
+        { image: "images/portfolio/nails/nails15.jpg" },
+        { image: "images/portfolio/nails/nails16.jpg" },
+        { image: "images/portfolio/nails/nails17.jpg" }
+    ],
+    eyes: [
+        { image: "images/portfolio/eyes/eyes1.jpg" },
+        { image: "images/portfolio/eyes/eyes2.jpg" },
+        { image: "images/portfolio/eyes/eyes3.jpg" },
+        { image: "images/portfolio/eyes/eyes4.jpg" },
+        { image: "images/portfolio/eyes/eyes5.jpg" },
+        { image: "images/portfolio/eyes/eyes6.jpg" },
+        { image: "images/portfolio/eyes/eyes7.jpg" },
+        { image: "images/portfolio/eyes/eyes8.jpg" },
+        { image: "images/portfolio/eyes/eyes9.jpg" },
+        { image: "images/portfolio/eyes/eyes10.jpg" },
+        { image: "images/portfolio/eyes/eyes11.jpg" }
+    ]
+};
+
+// Рендеринг услуг (только изображения)
+renderPortfolio(portfolio.hair, "hair-portfolio");
+renderPortfolio(portfolio.nails, "nail-portfolio");
+renderPortfolio(portfolio.eyes, "eyes-portfolio");
+
+// Логика переключения категорий
+document.querySelectorAll('.menu-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        document.querySelectorAll('.menu-btn').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        document.querySelectorAll('.portfolio-container').forEach(container => {
+            container.classList.remove('active');
+        });
+
+        document.getElementById(this.dataset.category).classList.add('active');
+    });
+});
+
+// Открытие модального окна при клике на изображение
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeModal = document.getElementById("close-modal");
+document.querySelectorAll('.portfolio-img').forEach(img => {
+    img.addEventListener('click', function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src; // Устанавливаем источник изображения в модальное окно
+    });
+});
+
+// Закрытие модального окна
+closeModal.addEventListener('click', function () {
+    modal.style.display = "none";
+});
+
+// Закрытие модального окна, если кликнуть вне области изображения
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+</script>
+
+<footer>
+    <p>&copy; Anturazh Style. Салон красоты.</p>
+</footer>
+
+</body>
+</html>
