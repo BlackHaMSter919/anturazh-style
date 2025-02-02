@@ -7,17 +7,10 @@ body {
     padding: 0; /* Убирает отступы по умолчанию */
     height: 100vh; /* Задает высоту страницы на весь экран */
 }
-.services-container{
-    max-width: 1200px;
-    margin: 2px auto;
-    padding: 1px;
-}
-.portfolio-container{
-    margin: 2px auto;
-    padding: 1px;
-    max-width: 1200px;
-}
 .container-services{
+    margin: 2px auto;
+    padding: 1px;
+    max-width: 1200px;
     margin-top:150px;
 }
 
@@ -92,6 +85,9 @@ body {
 }
 .container-portfolio{
   margin-top:150px;
+    max-width: 1200px;
+    margin: 2px auto;
+    padding: 1px;
 }
 
 /* Контейнер с карточками */
