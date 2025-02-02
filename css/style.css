@@ -64,13 +64,13 @@ body {
 
 /* Заголовок */
 .service h3 {
-    font-size: clamp(7px, 1.5vw, 20px);/* Уменьшается при сужении экрана */
+    font-size: clamp(7px, 1.4vw, 20px);/* Уменьшается при сужении экрана */
     margin: 4px 0;
 }
 
 /* Описание */
 .service p {
-    font-size: clamp(5px, 1.5svw, 18px);/* Уменьшается, но не меньше 1rem */
+    font-size: clamp(5px, 1.4vw, 18px);/* Уменьшается, но не меньше 1rem */
     margin: 4px 0;
 }
 
@@ -83,7 +83,7 @@ body {
     font-weight: bold;
     color: #ff6600;
     margin: 4px 0;
-    font-size: clamp(7px, 1.5vw, 20px); /* Цена тоже уменьшается */
+    font-size: clamp(7px, 1.4vw, 20px); /* Цена тоже уменьшается */
 }
 
 /* Эффект при наведении */
