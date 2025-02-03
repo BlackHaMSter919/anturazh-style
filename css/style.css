@@ -84,7 +84,7 @@ body {
     transform: scale(1.05);
 }
 .container-portfolio{
-  margin-top:150px;
+    margin-top: 150px;
     max-width: 1200px;
     margin: 2px auto;
     padding: 1px;
