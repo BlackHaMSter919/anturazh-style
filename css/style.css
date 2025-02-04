@@ -6,7 +6,10 @@ body {
     margin: 0; /* Убирает отступы по умолчанию */
     padding: 0; /* Убирает отступы по умолчанию */
     height: 100vh; /* Задает высоту страницы на весь экран */
-}
+} 
+.container-portfolio{
+        margin-top:150px;
+    }
 .container-services{
     margin: 2px auto;
     padding: 1px;
@@ -106,6 +109,14 @@ body {
 
 /* Карточка изображения */
 .portfolio {
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: min(1vw, 5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
     width: 100%;
     position: relative;
     overflow: hidden;
