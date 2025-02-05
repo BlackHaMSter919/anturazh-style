@@ -19,22 +19,92 @@ body {
     padding: 1px;
     max-width: 1200px;
     }
-
-#zap{
-    position: fixed;
-    display: flex;
-    z-index: 900;
-    bottom: 50px;
-    left: 50px;
+.reviews-container {
+    text-align: center; /* Центрируем содержимое */
+    margin: 50px 0; /* Отступы сверху и снизу */
 }
 
+.reviews-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Отступ от кнопки */
+}
+
+.reviews-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.reviews-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05); /* Немного увеличивается при наведении */
+}
 .zap-icon{
+    position: relative;
+    display: flex;
     height: 90px;
-    width: auto;
+    width: 100px;
+    justify-content: center;
+    z-index: 900;
+    bottom: 100px;
+    left: 100px;
+    align-items: center;
+}
+.online-button {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #ff6600; /* Цвет кнопки */
+    color: #fff;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shedow 0.3s ease;
 }
 
-.zap-icon:hover {
-    transform: scale(1.2);
+.online-button:hover {
+    background-color: #ff6600;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.online-button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 69, 0, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
 .container-services{
@@ -273,43 +343,11 @@ nav a:hover, nav a:active{
     transform: scale(1.2);
     color: #ff6600;
 }
-.socials-up{
-    text-align: center;
-}
+
 /* Социальные сети */
-.socials-down {
+#socials {
     text-align: center;
-    justify-content: space-between; /* Распределяем элементы по ширине */
-    align-items: center; /* Выравниваем по вертикали */
-    text-align: center;
-}
 
-.comment{
-    width: 50%; /* Карта занимает половину экрана */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    padding-left: 50px;
-}
-.comment h2{
-    text-align: center;
-    display: flex;
-
-}
-.comment-icon{
-    width: 50px;
-    ext-align: center;
-    display: flex;
-    height: 50px;
-    transition: transform 0.3s ease;
-    padding-bottom: 90px;
-
-}
-.comment-icon:hover{
-    transform: scale(1.2);
 }
 
 .social-icons-up {
@@ -505,16 +543,19 @@ h3 {
 @media (max-width: 1080px) {
 
     /* Контейнер с карточками */
-.container-portfolio{
-    top: 70px;
-}
-    .container-services{
-        margin-top:70px;
+    .container-portfolio {
+        top: 70px;
     }
+
+    .container-services {
+        margin-top: 70px;
+    }
+
     /* Контейнер с карточками */
     .services-container {
         padding-bottom: 50px;
     }
+
     .header {
         height: 60px;
         text-align: center;
@@ -638,7 +679,8 @@ h3 {
         font-size: 12px;
         font-weight: 700;
     }
-    #zap{
+
+    #zap {
         position: fixed;
         display: flex;
         z-index: 900;
@@ -646,9 +688,25 @@ h3 {
         left: 50px;
     }
 
-    .zap-icon{
+    .zap-icon {
         height: 45px;
         width: auto;
     }
-}
 
+    .zap-icon {
+        height: 50px;
+        width: 50px;
+
+    }
+
+    .online-button {
+        bottom: 50px;
+        right: 20px;
+        display: flex;
+        width: 70px;
+        height: 70px;
+        font-size: 13px;
+    }
+
+
+}
