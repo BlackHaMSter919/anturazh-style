@@ -558,6 +558,9 @@ h3 {
     justify-content: center;
     align-items: center;
 }
+.workers{
+    padding-top: 110 px;
+}
 .dolyami,
 .workers {
   display: flex;
