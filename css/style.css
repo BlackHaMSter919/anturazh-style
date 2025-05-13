@@ -561,10 +561,10 @@ h3 {
 }
 .dolyami,
 .workers {
-    background: lightgray;
+    background: white;
   display: flex;
   width: 100%;
-    height: 100%;
+    height: auto;
   
 }
 
@@ -585,17 +585,21 @@ h3 {
 .dolyami-image,
 .workers-image {
   width: 50%;
-    background: lightgray;
-  height: 100%;
+    background: white;
+  height: 400px;
+justify-content: center;
+align-items: center;
+display: flex;
+overwflow: hidden;
     
 }
 
 .dolyami-image img,
 .workers-image img {
   width: 100%;
-    background: lightgray;
-  height: 100%;
-     justify-content: center;
+    background: white;
+  height: auto;
+     
 
 }
 /*---------------------------------------------------------------------*/
@@ -731,8 +735,8 @@ h3 {
 .dolyami-text,
 .workers-text {
     font-size: 18px;
-}
     font-weight:900;
+}
     h2 {
         font-size: 18px;
         font-weight: 900;
