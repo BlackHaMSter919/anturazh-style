@@ -50,12 +50,15 @@
         <button class="menu-btn active" data-category="hair-services">Парикмахерские услуги</button>
         <button class="menu-btn" data-category="nail-services">Маникюр и педикюр</button>
         <button class="menu-btn" data-category="eyes-services">Брови</button>
+	<button class="menu-btn" data-category="depilation-services">Депиляция</button>
+
     </div>
 
     <!-- Блоки с услугами -->
     <div id="hair-services" class="services-container active"></div>
     <div id="nail-services" class="services-container"></div>
     <div id="eyes-services" class="services-container"></div>
+    <div id="depilation-services" class="services-container"></div>
     </div>
 
 <!-- Модальное окно для увеличенного изображения -->
@@ -220,6 +223,33 @@
             },
 
     ];
+	 const depilationServices = [
+        {
+                image: "images/services/depilationServices/depilationServices1.jpg",
+                title: "Депиляция женская: ноги + подмышки",
+                description: "Безболезненая депеляция воском.",
+                price: "1600 руб."
+            },
+	    {
+                title: "Женское бикини + подмышки",
+                description: "Глубокое бикини + подмышки воском.",
+                price: "1600 руб."
+            },
+	    {
+                image: "images/services/depilationServices/depilationServices2.jpg",
+                title: "Мужская депиляция",
+                description: "В мужской депиляции есть свои нюансы.",
+                price: "600 руб."
+            },
+	    {
+                title: "Мужское бикини глубокое",
+                description: "",
+                price: "2500 руб."
+            },
+
+
+    ];
+
 
     
     // Рендеринг услуг
@@ -244,6 +274,7 @@
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
     const closeModal = document.getElementById("close-modal");
+	renderServices(depilationServices, "depilation-services");
 
     document.querySelectorAll('.service-img').forEach(img => {
         img.addEventListener('click', function () {
