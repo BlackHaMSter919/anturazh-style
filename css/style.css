@@ -583,19 +583,17 @@ h3 {
 .dolyami-image,
 .workers-image {
   width: 50%;
-  height: 100%;
+  height: 400px;
     overwflow: hidden;
     position: ralative; 
 }
 
 .dolyami-image img,
 .workers-image img {
-  width: auto;
-  height: 100%;
-  object-fit: cover; 
-    position: absolute; 
-    transform: translateX(-50%);
-    left: 50%;/* изображение будет заполнять блок */
+  width: 100%;
+  height: auto;
+    display: block;
+
 }
 /*---------------------------------------------------------------------*/
 /* Адаптация для телефонов */
