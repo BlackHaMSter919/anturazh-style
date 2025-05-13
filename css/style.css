@@ -32,7 +32,6 @@ text-align: center; /* Центрируем содержимое */
 
 .glow-link {
 padding-bottom: 75px;
-    padding-top: 110px;
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -41,7 +40,7 @@ padding-bottom: 75px;
 
 .glow-link:hover {
 color:#ff6600;
-  text-shadow: 0 0 5px orange, 0 0 10px #ff6600, 0 0 15px #ff6600;
+  text-shadow: 0 0 5px orange, 0 0 5px #ff6600, 0 0 5px #ff6600;
 }
 
 .reviews-title {
