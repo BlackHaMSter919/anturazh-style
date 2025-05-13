@@ -557,7 +557,7 @@ h3 {
     align-items: center;
 }
 .workers{
-    padding-top: 110 px;
+    padding-top: 110px;
 }
 .dolyami,
 .workers {
@@ -605,6 +605,8 @@ overwflow: hidden;
 /*---------------------------------------------------------------------*/
 /* Адаптация для телефонов */
 @media (max-width: 1080px) {
+    .workers{
+    padding-top: 70px;
 
     /* Контейнер с карточками */
     .container-portfolio {
