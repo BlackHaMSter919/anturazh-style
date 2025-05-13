@@ -1,5 +1,5 @@
 body {
-    background-image: url('/./images/index/image.jpg'); /* Путь к изображению */
+    background-image: url('/./images/index/image.png'); /* Путь к изображению */
     background-size: cover; /* Растягивает изображение, чтобы оно покрывало весь экран */
     background-position: center; /* Выравнивает изображение по центру */
     background-attachment: fixed; /* Закрепляет фон, чтобы он не прокручивался */
