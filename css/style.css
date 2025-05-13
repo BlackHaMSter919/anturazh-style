@@ -571,6 +571,8 @@ h3 {
 .dolyami-text,
 .workers-text {
   width: 50%;
+    font-size: 30px;
+    font-weight:900;
     background: lightgray;
   padding: 40px;
   box-sizing: border-box;
@@ -585,8 +587,7 @@ h3 {
   width: 50%;
     background: lightgray;
   height: 100%;
-    overwflow: hidden;
-    position: ralative; 
+    
 }
 
 .dolyami-image img,
@@ -595,14 +596,11 @@ h3 {
     background: lightgray;
   height: 100%;
      justify-content: center;
-    display: block;
 
 }
 /*---------------------------------------------------------------------*/
 /* Адаптация для телефонов */
 @media (max-width: 1080px) {
-.glow-link {
-padding-bottom: 50px;
 
     /* Контейнер с карточками */
     .container-portfolio {
@@ -730,7 +728,11 @@ padding-bottom: 50px;
         width: 15px;
         height: 15px;
     }
-
+.dolyami-text,
+.workers-text {
+    font-size: 18px;
+}
+    font-weight:900;
     h2 {
         font-size: 18px;
         font-weight: 900;
