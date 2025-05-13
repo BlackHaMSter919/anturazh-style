@@ -582,8 +582,7 @@ h3 {
   align-items: flex-start;
 }
 
-.dolyami-image,
-.workers-image {
+.dolyami-image{
   width: auto;
     background: white;
   height: auto;
@@ -593,14 +592,27 @@ display: flex;
 overwflow: hidden;
     
 }
+.workers-image {
+  width: auto;
+    background: lightgray;
+  height: auto;
+justify-content: center;
+align-items: center;
+display: flex;
+overwflow: hidden;
+    
+}
 
-.dolyami-image img,
-.workers-image img {
+.dolyami-image img
+{
   width: auto;
 background: white;
   height: auto;
-     
-
+}
+.workers-image img {  
+    width: auto;
+background: lightgray;
+  height: auto;
 }
 /*---------------------------------------------------------------------*/
 /* Адаптация для телефонов */
