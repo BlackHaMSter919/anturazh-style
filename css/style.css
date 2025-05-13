@@ -583,7 +583,7 @@ h3 {
 }
 
 .dolyami-image{
-  width: 100%;
+  width: 50%;
     background: white;
   height: auto;
 justify-content: center;
@@ -593,7 +593,7 @@ overwflow: hidden;
     
 }
 .workers-image {
-  width: 100%;
+  width: 50%;
     background: lightgray;
   height: auto;
 justify-content: center;
